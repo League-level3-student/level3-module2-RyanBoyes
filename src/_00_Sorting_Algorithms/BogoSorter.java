@@ -18,8 +18,27 @@ public class BogoSorter extends Sorter {
 	// STEP 3. Go back to step 1.
 	
 	//1. Complete the sort method using the Bogo sort algorithm. 
+	
+	
+	
+	
+	
+	
+	
 	@Override
 	void sort(int[] array, SortingVisualizer display) {
-
+		
+		
+	
+	
+	
+	
+	
+	
 	}
+	
+	
+	
+	
+	
 }

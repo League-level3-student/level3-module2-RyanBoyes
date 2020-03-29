@@ -16,6 +16,9 @@ import javax.swing.JOptionPane;
  * BogoSorter
  */
 
+
+
+
 public class _02_SortingAlgorithms {
 	public static void main(String[] args) {
 		String[] options = new String[] {"Bogo", "Heap", "Merge", "Quick","Insertion","Selection", "Bubble"};
@@ -27,6 +30,7 @@ public class _02_SortingAlgorithms {
 		switch(choice) {
 		case "Bubble":{
 			new SortingVisualizer(new BubbleSorter());
+			
 			break;
 		}
 		case "Selection":{

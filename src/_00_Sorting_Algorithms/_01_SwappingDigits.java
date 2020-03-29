@@ -35,21 +35,16 @@ class _01_SwappingDigits {
 	//   Iterate through the array and when you find two elements that are out
 	//   of order, swap them. Repeat this until the array is in order.
 	public static void sortIntArray(int[] arr) {
-		int temp;
-		
-		for(int k=1; k<arr.length-1; k++) {
-			for(int i=0;i<arr.length-1;i++) {
-				
-				if(arr[i]>arr[i+1]) {
-					
-					temp = arr[i];
-					arr[i] = arr[i+1];
-					arr[i+1] = arr[i];
-				
-				}
-			}
-		  
-		}
+		 int n = arr.length;
+	        for (int i = 0; i < n-1; i++)
+	            for (int j = 0; j < n-i-1; j++)
+	                if (arr[j] > arr[j+1])
+	                {
+	                    // swap temp and arr[i]
+	                    int temp = arr[j];
+	                    arr[j] = arr[j+1];
+	                    arr[j+1] = temp;
+	                }
 		System.out.println(arr[4]);
 		
 	}
@@ -59,22 +54,16 @@ class _01_SwappingDigits {
 	//   *Double Hint* Use the method you already wrote in step 2 to sort it
 	public static int findMiddle(int[] arr) {
 		
-		int temp;
-		 
-		
-		for(int k=1; k<arr.length-1; k++) {
-			for(int i=0;i<arr.length-2;i++) {
-				
-				if(arr[i]>arr[i+1]) {
-					
-					temp = arr[i];
-					arr[i] = arr[i+1];
-					arr[i+1] = arr[i];
-				
-				}
-			}
-		  
-		}
+		 int n = arr.length;
+	        for (int i = 0; i < n-1; i++)
+	            for (int j = 0; j < n-i-1; j++)
+	                if (arr[j] > arr[j+1])
+	                {
+	                    // swap temp and arr[i]
+	                    int temp = arr[j];
+	                    arr[j] = arr[j+1];
+	                    arr[j+1] = temp;
+	                }
 		
 		return arr[2];
 		
