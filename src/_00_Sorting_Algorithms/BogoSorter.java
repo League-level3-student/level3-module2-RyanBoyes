@@ -28,14 +28,41 @@ public class BogoSorter extends Sorter {
 	@Override
 	void sort(int[] array, SortingVisualizer display) {
 		
-		
+		int attempts = 0;
+		while(!rightOrder(array)) {
+			display.updateDisplay();
+			randomSort(array);
+			attempts++;
+		}
 	
+}
 	
-	
-	
-	
-	
+	static void randomSort(int[] array) {
+		Random rnd = new Random();
+		for(int i = 0; i<array.length; i++) {
+			int swapPos = rnd.nextInt(array.length);
+			int temp = array[i];
+			array[i] = array[swapPos];
+			array[swapPos] = temp;
+		}
 	}
+	
+	static boolean rightOrder(int[] array) {
+		for(int i = 0; i<array.length-1; i++) {
+			if(array[i] > array[i+1]) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
