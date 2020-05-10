@@ -14,12 +14,25 @@ public class _01_SearchingAndSortingAlgorithms {
 	 **/
 
 	/* 1. Create a method that will find and return the first index of a broken egg */
+	
+	
+	
 	@Test
 	public void testSearch() {
 		List<String> eggs = Arrays.asList(new String[] { "whole", "whole", "whole", "whole", "cracked", "whole", "whole", "whole",
 				"cracked", "whole", "whole", "whole" });
 		assertEquals(4, Algorithms.findBrokenEgg(eggs));
 	}
+	
+	static int findCracked(String[] findCracked) {
+		for(int i=0; i<findCracked.length; i++) {
+			if(findCracked[i].equals("cracked")) {
+				return i;
+			}
+		}
+		return -1;
+	}
+	
 
 	/* 2. Count how many oysters contain pearls. */
 //	@Test
