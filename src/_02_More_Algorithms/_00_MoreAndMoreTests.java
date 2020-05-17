@@ -13,28 +13,28 @@ import org.junit.Test;
 public class _00_MoreAndMoreTests {
 
 //	@Test
-	//  public void MultTest() {
+	  public void MultTest() {
 
 		 
 		  
 		  
 		  
-	    //assertEquals("10 x 0 = 0", multiply(10, 0));
-	    //assertEquals("10 x 10 = 100", multiply(10, 10));
-	    //assertEquals("8 x 11 = 88", multiply(8, 11));
-//  }
+		assertEquals("10 x 0 = 0", multiply(10, 0));
+	    assertEquals("10 x 10 = 100", multiply(10, 10));
+	    assertEquals("8 x 11 = 88", multiply(8, 11));
+  }
 //
 //	@Test
-	//  public void PrimeTest() {
+	  public void PrimeTest() {
 
-//        assertTrue(isPrime(3));
-//	    assertTrue(isPrime(5));
-	//    assertTrue(isPrime(541));
-	  //  assertFalse(isPrime(4));
-	    //assertFalse(isPrime(12));
-	    //assertFalse(isPrime(527));
+        assertTrue(isPrime(3));
+	    assertTrue(isPrime(5));
+	    assertTrue(isPrime(541));
+	    assertFalse(isPrime(4));
+	    assertFalse(isPrime(12));
+	    assertFalse(isPrime(527));
 
-	//  }
+	  }
 //
 //	@Test
 	  public void SquareTest() {
@@ -54,26 +54,41 @@ public class _00_MoreAndMoreTests {
 	  }
 //
 //	@Test
-//	  public void CubeTest() {
-//
-//	    assertTrue(isCube(27));
-//	    assertTrue(isCube(216));
-//	    assertTrue(isCube(729));
-//	    assertTrue(isCube(1));
-//	    assertFalse(isCube(3));
-//	    assertFalse(isCube(22));
-//	    assertFalse(isCube(143));
-//
-//	  }
+	  public void CubeTest() {
 
- int multiply(int i, int j) {
+	    assertTrue(isCube(27));
+	    assertTrue(isCube(216));
+	    assertTrue(isCube(729));
+	    assertTrue(isCube(1));
+	    assertFalse(isCube(3));
+	    assertFalse(isCube(22));
+	    assertFalse(isCube(143));
+
+	  }
+
+public static int multiply(int i, int j) {
 	// TODO Auto-generated method stub
 	
+	int answer = i*j;
+	JOptionPane.showMessageDialog(null, i + " x " + j + " = " + answer);
 	
 	
 	
+	return answer;
+}
+
+
+static boolean isPrime(int p){
 	
-	return 0;
+	for(int i = p-1; p>0; p--) {
+		if(p%i==0) {
+			return false;
+		}
+	}
+
+	return true;
+
+	
 }
 
 
@@ -81,8 +96,10 @@ public static boolean isSquare(int a) {
 
 	
 	int answer = a^(1/2);
+	double answerdouble = answer;
 	
-	if((a^(1/2))==answer) {
+	
+	if(answerdouble == answer) {
 		return true;
 	}
 	
@@ -91,7 +108,23 @@ public static boolean isSquare(int a) {
 }
 
 
-
+public static boolean isCube(int q) {
+	
+	int answer = q^(1/3);
+	double answerdouble = answer;
+	
+	if(answerdouble == answer) {
+		return true;
+	}
+	
+	
+	
+	
+	
+	
+	
+	return false;
+}
 
 
 
