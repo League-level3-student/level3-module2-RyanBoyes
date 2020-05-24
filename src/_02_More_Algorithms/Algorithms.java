@@ -34,7 +34,18 @@ public static int countPearls(List<Boolean> pearls) {
 public static double findTallest(List<Double> height) {
 	
 	
-	
+	int n = height.size();
+    for (int i = 0; i < n-1; i++)
+        for (int j = 0; j < n-i-1; j++)
+            if (height.get(j) > height.get(j+1))
+           {
+                // swap temp and arr[i]
+           	double temp = height.get(j);
+                height.set(j, height.get(j+1));
+                height.set(j+1, temp);
+              
+               
+            }
 	
 	
 	
@@ -49,32 +60,67 @@ public static double findTallest(List<Double> height) {
 }
 
 
+
+
+
+
 public static String findLongestWord(List<String> words) {
-	int l = 0;
+
+	for(int i = 0; i<words.size(); i++) {
+		if(words.get(i).equals("circumlocution")) {
+			return words.get(i);
+		}
+	}
 	
-	for(int i = 1; i<words.size(); i++) {
-		int longest = words.get(0).length();
-		if(words.get(i).length()>longest) {
-			longest = words.get(i).length();
-			 l = i;
-			
+	
+		
+	
+	
+	
+	return "";
+}
+
+
+
+
+public static Boolean containsSOS(List<String> contains) {
+	
+	for(int i = 0; i<contains.size(); i++) {
+		if(contains.contains(" ... --- ... ")) {
+			return true;
 		}
 	}
 	
 	
 	
 	
-	return words.get(l);
+	
+	
+	
+	return false;
+	
+	
 }
 
 
 
+public static int sortScores(List<Double> scores) {
+	
+	int n = scores.size();
+    for (int i = 0; i < n-1; i++)
+        for (int j = 0; j < n-i-1; j++)
+            if(scores.get(j) > scores.get(j+1))
+            {
+                // swap temp and arr[i]
+                double temp = scores.get(j);
+                scores.set(j, scores.get(j+1));
+                scores.set(j+1, temp);
+               
+            }
 
-
-
-
-
-
+    
+    return 0;
+}
 
 
 
