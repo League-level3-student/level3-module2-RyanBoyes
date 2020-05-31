@@ -104,7 +104,7 @@ public static Boolean containsSOS(List<String> contains) {
 
 
 
-public static int sortScores(List<Double> scores) {
+public static List<Double> sortScores(List<Double> scores) {
 	
 	int n = scores.size();
     for (int i = 0; i < n-1; i++)
@@ -119,15 +119,55 @@ public static int sortScores(List<Double> scores) {
             }
 
     
-    return 0;
+    return scores;
 }
 
 
 
+public static List<String> sortDNA(List<String> dna) {
+	
+	
+	int n = dna.size();
+    for (int i = 0; i < n-1; i++) {
+        for (int j = 0; j < n-i-1; j++) {
+            if (dna.get(j).length() > dna.get(j+1).length())
+            {
+                // swap temp and arr[i]
+                String temp = dna.get(j);
+                dna.set(j, dna.get(j+1));
+                dna.set(j+1, temp);
+               
+                
+            }
+            }
+      
+        
+    }
+
+	return dna;
+	
+}
 
 
-
-
+public static List<String> sortWords(List<String> words) {
+	
+	int n = words.size();
+    for (int i = 0; i < n-1; i++)
+        for (int j = 0; j < n-i-1; j++)
+            if(words.get(j).compareTo(words.get(j+1))>0)
+            {
+                // swap temp and arr[i]
+                String temp = words.get(j);
+                words.set(j, words.get(j+1));
+                words.set(j+1, temp);
+               
+            }
+	
+	
+	
+	
+	return words;
+}
 
 
 
